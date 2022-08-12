@@ -2,21 +2,9 @@ LOCAL_PATH := $(call my-dir)
 
 build:=0
 
-ifeq ($(PLATFORM_SDK_VERSION),28)
-$(warning build for android p)
-build=1
-endif
+ifeq ($(PLATFORM_SDK_VERSION),33)
 
-ifeq ($(PLATFORM_SDK_VERSION),30)
-
-$(warning build for android r)
-
-build=1
-endif
-
-ifeq ($(PLATFORM_SDK_VERSION),31)
-
-$(warning build for android s)
+$(warning build for android t)
 
 build=1
 endif
@@ -31,7 +19,7 @@ OMX_PATH_64 := $(TARGET_OUT)/lib64/
 endif
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libamvenc_api
+LOCAL_MODULE := lib_avc_vpcodec
 LOCAL_MULTILIB := both
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TAGS := optional
@@ -45,21 +33,7 @@ LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libvpcodec
-LOCAL_MULTILIB := both
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH_32 := $(OMX_PATH_32)
-LOCAL_MODULE_PATH_64 := $(OMX_PATH_64)
-LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
-LOCAL_SRC_FILES_arm := lib/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
-LOCAL_SRC_FILES_arm64 := lib64/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
-LOCAL_CHECK_ELF_FILES := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libjpegenc_api
+LOCAL_MODULE := libvp_hevc_codec
 LOCAL_MULTILIB := both
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TAGS := optional
