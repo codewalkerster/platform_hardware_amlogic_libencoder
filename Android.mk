@@ -20,8 +20,8 @@ endif
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := lib_avc_vpcodec
-LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
-LOCAL_LICENSE_CONDITIONS := notice
+LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0 legacy_proprietary
+LOCAL_LICENSE_CONDITIONS := notice proprietary by_exception_only
 LOCAL_MULTILIB := both
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TAGS := optional
@@ -36,8 +36,8 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libvp_hevc_codec
-LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
-LOCAL_LICENSE_CONDITIONS := notice
+LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0 legacy_proprietary
+LOCAL_LICENSE_CONDITIONS := notice proprietary by_exception_only
 LOCAL_MULTILIB := both
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TAGS := optional
@@ -52,8 +52,8 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libamvenc_api
-LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
-LOCAL_LICENSE_CONDITIONS := notice
+LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0 legacy_proprietary
+LOCAL_LICENSE_CONDITIONS := notice proprietary by_exception_only
 LOCAL_MULTILIB := both
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TAGS := optional
@@ -68,8 +68,8 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libvpcodec
-LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
-LOCAL_LICENSE_CONDITIONS := notice
+LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0 legacy_proprietary
+LOCAL_LICENSE_CONDITIONS := notice proprietary by_exception_only
 LOCAL_MULTILIB := both
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TAGS := optional
