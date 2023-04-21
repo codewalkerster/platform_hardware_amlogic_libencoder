@@ -1,15 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
-build:=0
+$(warning build libencoder for android $(PLATFORM_SDK_VERSION))
 
-ifeq ($(PLATFORM_SDK_VERSION),33)
-
-$(warning build for android t)
-
-build=1
-endif
-
-ifeq ($(build), 1)
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26 && echo OK),OK)
 OMX_PATH_32 := $(TARGET_OUT_VENDOR)/lib/
 OMX_PATH_64 := $(TARGET_OUT_VENDOR)/lib64/
@@ -97,7 +89,5 @@ LOCAL_SRC_FILES_arm := lib/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 LOCAL_SRC_FILES_arm64 := lib64/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 LOCAL_CHECK_ELF_FILES := false
 include $(BUILD_PREBUILT)
-
-endif
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
