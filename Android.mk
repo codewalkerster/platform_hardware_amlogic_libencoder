@@ -1,7 +1,5 @@
 LOCAL_PATH := $(call my-dir)
 
-$(warning build libencoder for android $(PLATFORM_SDK_VERSION))
-
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26 && echo OK),OK)
 OMX_PATH_32 := $(TARGET_OUT_VENDOR)/lib/
 OMX_PATH_64 := $(TARGET_OUT_VENDOR)/lib64/
