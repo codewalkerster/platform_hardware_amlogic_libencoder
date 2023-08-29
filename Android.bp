@@ -1,0 +1,191 @@
+// *** THIS PACKAGE HAS SPECIAL LICENSING CONDITIONS.  PLEASE
+//     CONSULT THE OWNERS AND opensource-licensing@google.com BEFORE
+//     DEPENDING ON IT IN YOUR PROJECT. ***
+package {
+    // See: http://go/android-license-faq
+    // A large-scale-change added 'default_applicable_licenses' to import
+    // all of the 'license_kinds' from "vendor_amlogic_common_license"
+    // to get the below license kinds:
+    //   SPDX-license-identifier-Apache-2.0
+    //   SPDX-license-identifier-FTL
+    //   SPDX-license-identifier-MIT
+    //   legacy_by_exception_only (by exception only)
+    //   legacy_notice
+    //   legacy_unencumbered
+    default_applicable_licenses: ["vendor_amlogic_common_license"],
+}
+
+cc_library_headers {
+    name: "libencoder_headers",
+    vendor: true,
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_amvenc",
+	compile_multilib: "both",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    arch: {
+        arm: {
+            srcs: ["lib/lib_amvenc.so"],
+        },
+        arm64: {
+            srcs: ["lib64/lib_amvenc.so"],
+        },
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_avc_vpcodec",
+	compile_multilib: "both",
+    vendor: true,
+    strip: {
+    none: true,
+    },
+
+    arch: {
+        arm: {
+            srcs: ["lib/lib_avc_vpcodec.so"],
+        },
+        arm64: {
+            srcs: ["lib64/lib_avc_vpcodec.so"],
+        },
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvp_hevc_codec",
+	compile_multilib: "both",
+	vendor: true,
+    strip: {
+        none: true,
+    },
+    arch: {
+        arm: {
+            srcs: ["lib/libvp_hevc_codec.so"],
+        },
+        arm64: {
+            srcs: ["lib64/libvp_hevc_codec.so"],
+        },
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "libamvenc_api",
+	compile_multilib: "both",
+    vendor: true,
+    strip: {
+    none: true,
+    },
+    arch: {
+        arm: {
+            srcs: ["lib/libamvenc_api.so"],
+        },
+        arm64: {
+            srcs: ["lib64/libamvenc_api.so"],
+        },
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvpcodec",
+	compile_multilib: "both",
+	vendor: true,
+    strip: {
+        none: true,
+    },
+    arch: {
+        arm: {
+            srcs: ["lib/libvpcodec.so"],
+        },
+        arm64: {
+            srcs: ["lib64/libvpcodec.so"],
+        },
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvp_hevc_codec_new",
+	compile_multilib: "both",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    arch: {
+        arm: {
+            srcs: ["lib/libvp_hevc_codec_new.so"],
+        },
+        arm64: {
+            srcs: ["lib64/libvp_hevc_codec_new.so"],
+        },
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_encoder_media_process",
+	compile_multilib: "both",
+    vendor: true,
+    strip: {
+		none: true,
+    },
+    arch: {
+        arm: {
+            srcs: ["lib/lib_encoder_media_process.so"],
+        },
+        arm64: {
+            srcs: ["lib64/lib_encoder_media_process.so"],
+        },
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
