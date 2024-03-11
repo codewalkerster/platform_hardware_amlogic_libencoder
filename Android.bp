@@ -189,3 +189,51 @@ cc_prebuilt_library_shared {
     },
     check_elf_files: false,
 }
+
+cc_prebuilt_library_shared {
+    name: "libvc_codec",
+	compile_multilib: "both",
+    vendor: true,
+    strip: {
+		none: true,
+    },
+    arch: {
+        arm: {
+            srcs: ["lib/libvc_codec.so"],
+        },
+        //arm64: {
+        //    srcs: ["lib64/libvc_codec.so"],
+        //},
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvcenc",
+	compile_multilib: "both",
+    vendor: true,
+    strip: {
+		none: true,
+    },
+    arch: {
+        arm: {
+            srcs: ["lib/libvcenc.so"],
+        },
+        //arm64: {
+        //    srcs: ["lib64/libvcenc.so"],
+        //},
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
