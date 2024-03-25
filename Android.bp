@@ -237,3 +237,27 @@ cc_prebuilt_library_shared {
     },
     check_elf_files: false,
 }
+
+cc_prebuilt_library_shared {
+    name: "libjpegenc_api",
+	compile_multilib: "both",
+    vendor: true,
+    strip: {
+		none: true,
+    },
+    arch: {
+        arm: {
+            srcs: ["lib/libjpegenc_api.so"],
+        },
+        arm64: {
+            srcs: ["lib64/libjpegenc_api.so"],
+        },
+        x86: {
+            enabled: false,
+        },
+        x86_64: {
+            enabled: false,
+        },
+    },
+    check_elf_files: false,
+}
