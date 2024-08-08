@@ -201,9 +201,9 @@ cc_prebuilt_library_shared {
         arm: {
             srcs: ["lib/libvc_codec.so"],
         },
-        //arm64: {
-        //    srcs: ["lib64/libvc_codec.so"],
-        //},
+        arm64: {
+            srcs: ["lib64/libvc_codec.so"],
+        },
         x86: {
             enabled: false,
         },
@@ -225,9 +225,9 @@ cc_prebuilt_library_shared {
         arm: {
             srcs: ["lib/libvcenc.so"],
         },
-        //arm64: {
-        //    srcs: ["lib64/libvcenc.so"],
-        //},
+        arm64: {
+            srcs: ["lib64/libvcenc.so"],
+        },
         x86: {
             enabled: false,
         },
